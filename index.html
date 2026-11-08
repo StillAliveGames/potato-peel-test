@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#2a2420" />
+    <link rel="icon" href="data:," />
+    <title>Картошка (рабочее название)</title>
+    <script type="module" crossorigin src="./assets/index-BSP5RQcf.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-HMyIC-57.css">
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="game-canvas" aria-label="Чистка картошки"></canvas>
+      <div id="vignette"></div>
+      <header id="hud-top">
+        <div class="pill" id="money-pill"><strong id="money">0</strong><span class="rub">₽</span></div>
+        <div id="progress-wrap">
+          <div id="progress-bar"><div id="progress-fill"></div><span id="progress-text">Очищено 0%</span></div>
+          <div id="sub-stats">
+            <span id="stat-time">0,0 с</span>
+            <span id="stat-waste">мякоть 0 г</span>
+            <span id="stat-eyes">глазки 0/0</span>
+          </div>
+        </div>
+        <button id="sound-btn" class="icon-btn" type="button" aria-label="Звук">🔊</button>
+      </header>
+      <div id="combo" class="hidden">серия <b id="combo-n">×0</b></div>
+      <div id="hint"></div>
+      <div id="popups"></div>
+      <div id="score-card" class="hidden"></div>
+      <div id="debug" class="hidden"></div>
+      <footer id="controls-bottom">
+        <div id="rot-pad">
+          <button id="rot-up" class="icon-btn pad up" type="button" aria-label="Наклонить вверх">▲</button>
+          <button id="rot-left" class="icon-btn pad left" type="button" aria-label="Повернуть влево">⟲</button>
+          <button id="rot-right" class="icon-btn pad right" type="button" aria-label="Повернуть вправо">⟳</button>
+          <button id="rot-down" class="icon-btn pad down" type="button" aria-label="Наклонить вниз">▼</button>
+        </div>
+        <button id="done-btn" type="button" disabled>Готово</button>
+      </footer>
+    </main>
+  </body>
+</html>
