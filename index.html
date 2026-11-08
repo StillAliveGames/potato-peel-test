@@ -6,15 +6,15 @@
     <meta name="theme-color" content="#2a2420" />
     <link rel="icon" href="data:," />
     <title>Grandma’s Potatoes</title>
-    <script type="module" crossorigin src="./assets/index-d5q8vuG3.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Ch5ii4Gh.css">
+    <script type="module" crossorigin src="./assets/index-CDtiEYXH.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CJHpEpDK.css">
   </head>
   <body>
     <main id="app">
       <canvas id="game-canvas" aria-label="Чистка картошки"></canvas>
       <div id="vignette"></div>
       <header id="hud-top">
-        <div class="pill" id="money-pill"><strong id="money">0</strong><span class="rub">₽</span></div>
+        <div class="pill" id="money-pill"><strong id="money">0</strong><span class="rub">🪙</span></div>
         <div id="progress-wrap">
           <div id="progress-bar"><div id="progress-fill"></div><span id="progress-text">Очищено 0%</span></div>
           <div id="sub-stats">
@@ -23,7 +23,11 @@
             <span id="stat-eyes">глазки 0/0</span>
           </div>
         </div>
-        <button id="sound-btn" class="icon-btn" type="button" aria-label="Звук">🔊</button>
+        <button id="menu-btn" class="icon-btn" type="button" aria-label="Menu">☰</button>
+        <div id="menu" class="hidden">
+          <button id="menu-sound" type="button"></button>
+          <button id="menu-lang" type="button"></button>
+        </div>
       </header>
       <div id="duel-bar" class="hidden">
         <div class="duel-row"><span class="who" id="duel-you-name">🙂</span><div class="bar"><i id="duel-you"></i></div></div>
@@ -37,11 +41,24 @@
       <div id="score-card" class="hidden"></div>
       <div id="debug" class="hidden"></div>
       <div id="duel-overlay" class="hidden"></div>
+      <div id="veg-panel" class="hidden">
+        <div class="panel">
+          <button id="veg-close" type="button" aria-label="Close">✕</button>
+          <h2 id="veg-title"></h2>
+          <div id="veg-grid"></div>
+        </div>
+      </div>
       <div id="shop" class="hidden">
         <div class="panel">
+          <button id="shop-x" type="button" aria-label="Close">✕</button>
           <h2 id="shop-title"></h2>
+          <div id="shop-tabs">
+            <button type="button" data-tab="tools"></button>
+            <button type="button" data-tab="skills"></button>
+            <button type="button" data-tab="skins"></button>
+            <button type="button" data-tab="cases"></button>
+          </div>
           <div id="shop-list"></div>
-          <p id="shop-soon" class="soon"></p>
           <button id="shop-close" type="button"></button>
         </div>
       </div>
@@ -53,10 +70,9 @@
           <button id="rot-down" class="icon-btn pad down" type="button" aria-label="Наклонить вниз">▼</button>
         </div>
         <div id="right-col">
-          <div id="order-pill" class="chip"></div>
+          <button id="veg-btn" type="button">🥔</button>
           <button id="shop-btn" class="chip-btn" type="button">🛒</button>
           <button id="duel-btn" class="chip-btn" type="button">⚔️</button>
-          <button id="lang-btn" class="chip-btn small" type="button">EN</button>
           <button id="done-btn" type="button" disabled>Готово</button>
         </div>
       </footer>
