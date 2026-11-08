@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
     <meta name="theme-color" content="#2a2420" />
     <link rel="icon" href="data:," />
-    <title>Картошка (рабочее название)</title>
-    <script type="module" crossorigin src="./assets/index-BguTI-xN.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-W9nQKM0w.css">
+    <title>Grandma’s Potatoes</title>
+    <script type="module" crossorigin src="./assets/index-d5q8vuG3.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Ch5ii4Gh.css">
   </head>
   <body>
     <main id="app">
@@ -25,12 +25,26 @@
         </div>
         <button id="sound-btn" class="icon-btn" type="button" aria-label="Звук">🔊</button>
       </header>
+      <div id="duel-bar" class="hidden">
+        <div class="duel-row"><span class="who" id="duel-you-name">🙂</span><div class="bar"><i id="duel-you"></i></div></div>
+        <div class="duel-row"><span class="who" id="duel-bot-name">👴</span><div class="bar bot"><i id="duel-bot"></i></div></div>
+        <div id="duel-score"></div>
+      </div>
       <div id="combo" class="hidden">серия <b id="combo-n">×0</b></div>
       <div id="hint"></div>
       <div id="finger-guide" class="hidden"><i></i></div>
       <div id="popups"></div>
       <div id="score-card" class="hidden"></div>
       <div id="debug" class="hidden"></div>
+      <div id="duel-overlay" class="hidden"></div>
+      <div id="shop" class="hidden">
+        <div class="panel">
+          <h2 id="shop-title"></h2>
+          <div id="shop-list"></div>
+          <p id="shop-soon" class="soon"></p>
+          <button id="shop-close" type="button"></button>
+        </div>
+      </div>
       <footer id="controls-bottom">
         <div id="rot-pad">
           <button id="rot-up" class="icon-btn pad up" type="button" aria-label="Наклонить вверх">▲</button>
@@ -38,7 +52,13 @@
           <button id="rot-right" class="icon-btn pad right" type="button" aria-label="Повернуть вправо">⟳</button>
           <button id="rot-down" class="icon-btn pad down" type="button" aria-label="Наклонить вниз">▼</button>
         </div>
-        <button id="done-btn" type="button" disabled>Готово</button>
+        <div id="right-col">
+          <div id="order-pill" class="chip"></div>
+          <button id="shop-btn" class="chip-btn" type="button">🛒</button>
+          <button id="duel-btn" class="chip-btn" type="button">⚔️</button>
+          <button id="lang-btn" class="chip-btn small" type="button">EN</button>
+          <button id="done-btn" type="button" disabled>Готово</button>
+        </div>
       </footer>
     </main>
   </body>
